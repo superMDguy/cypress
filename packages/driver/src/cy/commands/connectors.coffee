@@ -23,7 +23,7 @@ module.exports = (Commands, Cypress, cy, state, config) ->
   ## thens can return more "thenables" which are not resolved
   ## until they're 'really' resolved, so naturally this API
   ## supports nesting promises
-  thenFn = (subject, options, fn) ->
+  thenFn = (subject, fn, options) ->
     ctx = @
 
     if _.isFunction(options)
